@@ -50,7 +50,7 @@ params:
 
     label:
         text: "Home"
-        icon: /apple-touch-icon.png
+        icon: /test.jpeg
         iconHeight: 35
 
     # profile-mode
@@ -78,8 +78,6 @@ params:
     socialIcons:
         - name: twitter
           url: "https://twitter.com/Tr3x__"
-        - name: stackoverflow
-          url: "https://stackoverflow.com"
         - name: github
           url: "https://github.com/R3x"
 
@@ -114,7 +112,7 @@ params:
 
 menu:
     main:
-        - identifier: categories
+        - identifier: categories1
           name: categories
           url: /categories/
           weight: 10
