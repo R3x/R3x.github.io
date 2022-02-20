@@ -1,6 +1,6 @@
 baseURL: http://r3x.in/
 languageCode: en-us
-title: My Personal Blog
+title: Siddharth's Blog
 paginate: 5
 theme: PaperMod
 
@@ -17,10 +17,10 @@ minify:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: My Personal Blog
+    title: Siddharth's Blog
     description: "Personal blog of R3x"
     keywords: [Blog, Portfolio, PaperMod]
-    author: R3x
+    author: Siddharth
     images: ["<link or path of image for opengraph, twitter-cards>"]
     DateFormat: "January 2, 2006"
     defaultTheme: dark # dark, light
@@ -55,9 +55,11 @@ params:
 
     # profile-mode
     profileMode:
-        enabled: false # needs to be explicitly set
-        title: Siddharth's Website 
-        subtitle: "This is subtitle"
+        enabled: True # needs to be explicitly set
+        title: Siddharth Muralee 
+        subtitle: >
+          I am a first year PhD student at Purdue University advised by Prof. Aravind Machiry and Prof. Antonio Bianchi.
+          I am working on a bunch of projects related to Systems Security, Vulnerability Research and Fuzzing.
         imageUrl: "<img location>"
         imageWidth: 120
         imageHeight: 120
@@ -95,7 +97,7 @@ params:
         hiddenInSingle: true # hide on single page
 
     editPost:
-        URL: "https://github.com/<path_to_repo>/content"
+        URL: "https://github.com/R3x.github.io/tree/master/content/"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
@@ -109,6 +111,7 @@ params:
         threshold: 0.4
         minMatchCharLength: 0
         keys: ["title", "permalink", "summary", "content"]
+
 menu:
     main:
         - identifier: categories
