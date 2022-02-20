@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://r3x.github.io/sitemap.xml
+Sitemap: https://R3x.github.io/sitemap.xml
