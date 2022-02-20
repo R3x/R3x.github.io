@@ -50,7 +50,7 @@ params:
 
     label:
         text: "Home"
-        icon: /test.jpeg
+        icon: /home_icon.jpeg
         iconHeight: 35
 
     # profile-mode
@@ -60,9 +60,9 @@ params:
         subtitle: >
           I am a first year PhD student at Purdue University advised by Prof. Aravind Machiry and Prof. Antonio Bianchi.
           I am working on a bunch of projects related to Systems Security, Vulnerability Research and Fuzzing.
-        imageUrl: "<img location>"
-        imageWidth: 120
-        imageHeight: 120
+        imageUrl: /photo.jpg
+        imageWidth: 250
+        imageHeight: 200
         imageTitle: my image
         buttons:
             - name: Posts
@@ -95,7 +95,7 @@ params:
         hiddenInSingle: true # hide on single page
 
     editPost:
-        URL: "https://github.com/R3x.github.io/tree/master/content/"
+        URL: "https://github.com/R3x/R3x.github.io/tree/master/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
@@ -112,15 +112,15 @@ params:
 
 menu:
     main:
-        - identifier: categories1
-          name: categories
-          url: /categories/
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
           weight: 10
-        - identifier: tags
-          name: tags
-          url: /tags/
-          weight: 20
-        - identifier: example
-          name: example.org
-          url: https://example.org
-          weight: 30
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: Categories
+          url: categories/
+          weight: 10
