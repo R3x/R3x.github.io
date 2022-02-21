@@ -61,7 +61,7 @@ params:
           I am a first year PhD student at Purdue University advised by Prof. Aravind Machiry and Prof. Antonio Bianchi.
           I am working on a bunch of projects related to Systems Security, Vulnerability Research and Fuzzing.
         imageUrl: /photo.jpg
-        imageWidth: 250
+        imageWidth: 200
         imageHeight: 200
         imageTitle: my image
         buttons:
