@@ -58,9 +58,7 @@ params:
         enabled: True # needs to be explicitly set
         title: Siddharth Muralee 
         subtitle: >
-          I am a first year PhD student at Purdue University advised by Prof. Aravind Machiry and Prof. Antonio Bianchi.
-          
-          I am working on a bunch of projects related to Systems Security, Vulnerability Research and Fuzzing.
+          PhD Student @ Purdue | CTF Player @ bi0s | security @ NetBSD | CloudFuzz 
         imageUrl: /photo.jpg
         imageWidth: 300
         imageHeight: 300
