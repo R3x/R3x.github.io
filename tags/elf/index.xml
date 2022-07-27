@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Siddharth&#39;s Blog</title>
-    <link>https://R3x.github.io/posts/</link>
-    <description>Recent content in Posts on Siddharth&#39;s Blog</description>
+    <title>ELF on Siddharth&#39;s Blog</title>
+    <link>https://R3x.github.io/tags/elf/</link>
+    <description>Recent content in ELF on Siddharth&#39;s Blog</description>
     <image>
       <url>https://R3x.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://R3x.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Jul 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/tags/elf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digging into ELFs (Part 1)</title>
       <link>https://R3x.github.io/posts/elf_1/</link>
@@ -20,16 +20,6 @@
       <description>Digging into ELFs (Part 1) In this blog, I plan to look at the ELF file format, specifically the ELF headers, sections and segments. This is gonna be a part of a series that I hope to complete part-by-part this month.
 I am planning to use the LIEF python module to help me look at ELFs and understand what&amp;rsquo;s happening.
 ELF Headers Each ELF file, contains a header - which is a collection of information about the ELF file.</description>
-    </item>
-    
-    <item>
-      <title>New Website/Blog</title>
-      <link>https://R3x.github.io/posts/temp/</link>
-      <pubDate>Sun, 20 Feb 2022 23:43:10 +0000</pubDate>
-      
-      <guid>https://R3x.github.io/posts/temp/</guid>
-      <description>Hello World! Yay! I finally decided to switch from wordpress to creating my own website. I was getting a lot of paywalls and it was becoming pretty painful to update the website every now and then.
-Let&amp;rsquo;s see how it goes.</description>
     </item>
     
   </channel>

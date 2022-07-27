@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Feb 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digging into ELFs (Part 1)</title>
+      <link>https://R3x.github.io/posts/elf_1/</link>
+      <pubDate>Tue, 26 Jul 2022 23:43:10 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/posts/elf_1/</guid>
+      <description>Digging into ELFs (Part 1) In this blog, I plan to look at the ELF file format, specifically the ELF headers, sections and segments. This is gonna be a part of a series that I hope to complete part-by-part this month.
+I am planning to use the LIEF python module to help me look at ELFs and understand what&amp;rsquo;s happening.
+ELF Headers Each ELF file, contains a header - which is a collection of information about the ELF file.</description>
+    </item>
+    
     <item>
       <title>New Website/Blog</title>
       <link>https://R3x.github.io/posts/temp/</link>
