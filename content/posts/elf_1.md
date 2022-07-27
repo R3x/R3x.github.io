@@ -104,10 +104,48 @@ Each segment header consists of the following fields:
 
 **NOTE** : If a segment is loadable, then it should have consecutive virtual addresses with the previous and the next segments. 
 
+Additionally, to view the program headers using objdump, you can use the following command:
 
-
+```bash
+objdump -l a.out 
+```
 
 ## The Section Headers
+
+A File also will contain a section header table, which will contain all the information about the sections inside the file. It is also an array of structures, with each structure representing a section.
+
+The following fields are present in each section header:
+- Name : Name of the section
+- Type : Each section has a type, which helps determine how to handle it
+- Flags : Determines things such as whether data is writable, whether it contains executable instructions etc.
+- Address : The virtual address of where the section should be present if it's loaded into memory
+- offset : The offset from the **start of the file** to the section
+- 
+
+```python
+print(binary.sections[1])
+```
+
+which returns the following output (formatted and comments added to make it readable):
+```python
+.interp (Name)            
+PROGBITS (Type : Here it means it was a section which holds information)
+318 ((792 in decimal) Virtual Address : Note that the address is in hexadecimal)  
+1c ((28 in decimal) size of the section in bytes) 
+318 ((792 in decimal) Offset from the start of the file)
+3.94076 (Entropy : This is not in the binary, but calculated by LIEF )
+ALLOC  (Flags : Means the section is in memory)
+INTERP LOAD (Segment Str : Type of Segments which holds this section, LIEF also prints this information)  
+```
+
+If you notice the offset, it's the same as the offset + the size of the program header, which is 792 bytes. This means it's adjacent to the program header table segment.
+
+The segement string is calculated by LIEF in the following way:
+```python
+segments_str = " - ".join([str(s.type).split(".")[-1] for s in section.segments])
+```
+
+
 
 ## Appendix
 
@@ -115,7 +153,7 @@ Each segment header consists of the following fields:
 
 (Copied from the man page)
 
-- PT_LOAD
+- **PT_LOAD**
   The array element specifies a loadable segment,
   described by p_filesz and p_memsz.  The bytes
   from the file are mapped to the beginning of the
@@ -127,10 +165,10 @@ Each segment header consists of the following fields:
   size.  Loadable segment entries in the program
   header table appear in ascending order, sorted
   on the p_vaddr member.
-- PT_DYNAMIC
+- **PT_DYNAMIC**
     The array element specifies dynamic linking
     information.
-- PT_INTERP
+- **PT_INTERP**
   The array element specifies the location and
   size of a null-terminated pathname to invoke as
   an interpreter.  This segment type is meaningful
@@ -138,15 +176,15 @@ Each segment header consists of the following fields:
   for shared objects).  However it may not occur
   more than once in a file.  If it is present, it
   must precede any loadable segment entry.
-- PT_NOTE
+- **PT_NOTE**
   The array element specifies the location of
   notes (ElfN_Nhdr).
-- PT_SHLIB
+- **PT_SHLIB**
   This segment type is reserved but has
   unspecified semantics.  Programs that contain an
   array element of this type do not conform to the
   ABI.
-- PT_PHDR
+- **PT_PHDR**
   The array element, if present, specifies the
   location and size of the program header table
   itself, both in the file and in the memory image
@@ -156,11 +194,11 @@ Each segment header consists of the following fields:
   of the memory image of the program.  If it is
   present, it must precede any loadable segment
   entry.
-- PT_LOPROC, PT_HIPROC
+- **PT_LOPROC, PT_HIPROC**
   Values in the inclusive range [PT_LOPROC,
   PT_HIPROC] are reserved for processor-specific
   semantics.
-- PT_GNU_STACK
+- **PT_GNU_STACK**
   GNU extension which is used by the Linux kernel
   to control the state of the stack via the flags
   set in the p_flags member.
