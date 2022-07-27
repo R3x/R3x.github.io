@@ -19,7 +19,7 @@
       <guid>https://R3x.github.io/posts/elf_1/</guid>
       <description>Digging into ELFs (Part 1) In this blog, I plan to look at the ELF file format, specifically the ELF headers, sections and segments. This is gonna be a part of a series that I hope to complete part-by-part this month.
 I am planning to use the LIEF python module to help me look at ELFs and understand what&amp;rsquo;s happening.
-ELF Headers Each ELF file, contains a header - which is a collection of information about the ELF file.</description>
+Overview ELF file contains a header and data. The data is divided into segments, each segment can contian a number of sections.</description>
     </item>
     
     <item>
