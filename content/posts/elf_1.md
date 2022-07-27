@@ -96,18 +96,72 @@ If you look at the offset you will discover that it's exactly the same as the si
 And the size is exactly same as the product of the number of program header entries and the size of each program header entry (Mentioned in the header above).
 
 Each segment header consists of the following fields:
-- Type : Determines what kind of segment it is, there are few possible types 
-- 
+- Type : Determines what kind of segment it is, there are few possible types (refer to the [Appendix below](#Elf-Segment-Types))
+- Flags : Determines whether the segment is read, write, execute, etc.
+- Offset : The offset **from the start of the file** to the segment.
+- Virtual/Physical Address : Usually the same, determines the virtual address of the segment.
+- alignment : alignment of the segments in the file. if it's 0/1 then it means there is no alignement. If it's 2^n then it means the segment is aligned to 2^n bytes.
 
-<details>
-  <summary>Click to expand!</summary>
-  
-  ## Heading
-  Test
-</details>
+**NOTE** : If a segment is loadable, then it should have consecutive virtual addresses with the previous and the next segments. 
 
 
 
 
+## The Section Headers
 
+## Appendix
+
+### ELF Segment Types 
+
+(Copied from the man page)
+
+- PT_LOAD
+  The array element specifies a loadable segment,
+  described by p_filesz and p_memsz.  The bytes
+  from the file are mapped to the beginning of the
+  memory segment.  If the segment's memory size
+  p_memsz is larger than the file size p_filesz,
+  the "extra" bytes are defined to hold the value
+  0 and to follow the segment's initialized area.
+  The file size may not be larger than the memory
+  size.  Loadable segment entries in the program
+  header table appear in ascending order, sorted
+  on the p_vaddr member.
+- PT_DYNAMIC
+    The array element specifies dynamic linking
+    information.
+- PT_INTERP
+  The array element specifies the location and
+  size of a null-terminated pathname to invoke as
+  an interpreter.  This segment type is meaningful
+  only for executable files (though it may occur
+  for shared objects).  However it may not occur
+  more than once in a file.  If it is present, it
+  must precede any loadable segment entry.
+- PT_NOTE
+  The array element specifies the location of
+  notes (ElfN_Nhdr).
+- PT_SHLIB
+  This segment type is reserved but has
+  unspecified semantics.  Programs that contain an
+  array element of this type do not conform to the
+  ABI.
+- PT_PHDR
+  The array element, if present, specifies the
+  location and size of the program header table
+  itself, both in the file and in the memory image
+  of the program.  This segment type may not occur
+  more than once in a file.  Moreover, it may
+  occur only if the program header table is part
+  of the memory image of the program.  If it is
+  present, it must precede any loadable segment
+  entry.
+- PT_LOPROC, PT_HIPROC
+  Values in the inclusive range [PT_LOPROC,
+  PT_HIPROC] are reserved for processor-specific
+  semantics.
+- PT_GNU_STACK
+  GNU extension which is used by the Linux kernel
+  to control the state of the stack via the flags
+  set in the p_flags member.
 
