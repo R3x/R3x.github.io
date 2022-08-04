@@ -22,5 +22,16 @@ I am planning to use the LIEF python module to help me look at ELFs and understa
 Overview ELF file contains a header and data. The data is divided into segments, each segment can contian a number of sections.</description>
     </item>
     
+    <item>
+      <title>Digging into ELFs (Part 2)</title>
+      <link>https://R3x.github.io/posts/elf_2/</link>
+      <pubDate>Tue, 26 Jul 2022 23:43:10 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/posts/elf_2/</guid>
+      <description>Digging into ELFs (Part 2) Last time, I spent time looking at the ELF headers. And we got a decent idea of how the ELF file format stores data in various segments and sections. Now let&amp;rsquo;s look deeper into different sections that are present in the ELF file.
+What are those various sections? To view the sections using the LIEF python module, we can use the following script:
+import lief binary = lief.</description>
+    </item>
+    
   </channel>
 </rss>
