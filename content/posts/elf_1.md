@@ -3,6 +3,13 @@ title: "Digging into ELFs (Part 1)"
 date: 2022-07-26 23:43:10  
 tags: ["ELF", "RE"]
 author: "Siddharth Muralee"
+category: "Reversing"
+params:
+    ShowBreadCrumbs: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowCodeCopyButtons: true
+ShowToc: true
 ---
 
 # Digging into ELFs (Part 1)
@@ -144,8 +151,6 @@ The segement string is calculated by LIEF in the following way:
 ```python
 segments_str = " - ".join([str(s.type).split(".")[-1] for s in section.segments])
 ```
-
-
 
 ## Appendix
 
