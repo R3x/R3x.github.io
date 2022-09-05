@@ -26,6 +26,7 @@ Now you need to create a folder for vscode settings. So from your root directory
 
 ```bash
 mkdir .vscode
+cd .vscode
 code settings.json
 ```
 
