@@ -169,11 +169,6 @@ The same technique can be used to get flags and other command line arguments for
 You can also use the `pickString` option to select from a list of options. For example, you can use this to select the pass to debug.
 
 ```json
-args : [
-    "${workspaceFolder}/passes/build/${input:passToDebug}/${input:passToDebug}.so",
-]
-
-
 {
     "id": "passToDebug",
     "type": "pickString",
@@ -185,4 +180,13 @@ args : [
 }
 ```
 
+This means that you can replace your `args` with the following to select the pass to debug:
 
+```json
+"-load",
+"${workspaceFolder}/passes/build/${input:passToDebug}/${input:passToDebug}.so",
+```
+
+## Conclusion
+
+Well, that's it. I hope this helps you debug your LLVM passes. If you have any questions, feel free to reach out to me. I will try to answer them as soon as I can.
