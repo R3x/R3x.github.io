@@ -10,7 +10,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Jul 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DEBUG</title>
+      <link>https://R3x.github.io/tags/debug/</link>
+      <pubDate>Sun, 04 Sep 2022 23:43:10 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/tags/debug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LLVM</title>
+      <link>https://R3x.github.io/tags/llvm/</link>
+      <pubDate>Sun, 04 Sep 2022 23:43:10 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/tags/llvm/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ELF</title>
       <link>https://R3x.github.io/tags/elf/</link>
