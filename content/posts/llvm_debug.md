@@ -22,7 +22,7 @@ Most of the LLVM projects are built using CMake. Let's make the assumption that 
 
 First, we need to install the cmake-tools extension for VSCode. The extension - [ms-vscode.cmake-tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) - is a must-have for writing CMake projects in VSCode. It provides a lot of features, including building, debugging, and testing CMake Projects.
 
-Now you need to create a folder for vscode settings. So from your root directory, run the following command:
+Now you need to create a folder for vscode settings. So from your Project's root directory, run the following command:
 
 ```bash
 mkdir .vscode
