@@ -10,7 +10,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Sep 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Oct 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advanced GDB Debugging</title>
+      <link>https://R3x.github.io/posts/gdb_advanced/</link>
+      <pubDate>Tue, 25 Oct 2022 23:43:10 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/posts/gdb_advanced/</guid>
+      <description>Advanced GDB Debugging In this post, I would like to point out some tips/tricks to make debugging easier with GDB. I will be focusing on Linux x86_64 binaries, but most of the things should work on other architectures as well. I will try to cover both
+I am gonna assume basic familiarity with GDB, such as setting breakpoints/stepping through code, etc. If you are not familiar with GDB, I would recommend reading/watching some basic tutorial for GDB.</description>
+    </item>
+    
     <item>
       <title>Debugging LLVM (opt) passes with VSCode</title>
       <link>https://R3x.github.io/posts/llvm_debug/</link>
