@@ -32,6 +32,13 @@ gdb -x <path to .gdbinit file>
 
 GDB has a lot of commands, I plan to try and cover the commands that helped me the most while debugging applications. A good starting tip - is that whenever you are stuck or can't remember the command that you were looking for, try using the `apropos` command. This is basically a regex search through the commands list and you can usually find the command you were looking for. To get more information about a command, use the `help` command.
 
+### Watchpoints
+
+Watchpoints are used to stop exectuing the program when a certain memory location is read/written. This is useful when you want to know when a certain variable is accessed.
+
+
+
+
 ### Conditional Breakpoints and Watchpoints
  
 Conditional breakpoints are a amazing feature of GDB, which allows you to set a breakpoint only if a certain condition is met. This is very useful when you are debugging a basic block that's called multiple times, and you want to stop only when a certain condition is met.
@@ -48,3 +55,8 @@ If symbols are available, you can also have checks on condition on the values of
 (gdb) break __afl_maybe_log if __afl_prev_loc == 0xdaef
 ```
 
+> Note: Sometimes if the type of the variable is not known you might have to cast it to the correct type, for ex:
+> 
+> ```bash
+> (gdb) break __afl_maybe_log if (unsigned long)__afl_prev_loc == 0xdaef
+> ```
