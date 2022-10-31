@@ -115,6 +115,9 @@ Some common uses are :
 - `catch signal <number/name>` : Break when a specific signal is sent
 - `catch load/unload <regex>` : Break when a library is loaded/unloaded
 
+### Custom commands
+
+TODO: Briefly explain how to write custom commands
 
 ## GDB Python Scripting
 
@@ -132,3 +135,82 @@ if you want to run a python script on a running gdb instance, you can use the `s
 (gdb) source <path/to/script.py>
 ```
 
+### Defining custom commands in GDB
+
+GDB allows you to define custom commands, in python. This is very useful to run a bunch of commands together and add some custom logic to it. 
+
+```python
+import gdb
+
+class TestCommand(gdb.Command):
+    def __init__(self):
+        super(TestCommand, self).__init__("test", gdb.COMMAND_USER)
+
+    def invoke(self, arg, from_tty):
+        print("Test command invoked")
+        counter = 0
+        try:
+            total_count = int(arg.split(" ")[0])
+            skip_count = int(arg.split(" ")[1])
+        except:
+            print("Invalid arguments passed")
+            return
+        
+        print(f"Total count: {total_count}")
+        print(f"Skip count: {skip_count}")
+
+        while counter < total_count:
+            if counter % skip_count == 0:
+                # Skip every skip count iteration
+                gdb.execute("continue")
+                continue
+            
+            gdb.execute("info registers")
+
+            counter += 1
+            gdb.execute("continue")
+
+TestCommand()
+```
+
+The above script defines a custom command called `test` which takes 2 arguments - `total_count` and `skip_count`. The command will print the register values for every iteration, except for every `skip_count` iteration.
+
+
+### Defining custom pretty printers
+
+Say you have a struct defined as follows:
+
+```c
+struct Node {
+    int value;
+    struct Node *next;
+};
+```
+
+While debugging, the program you wish to print the structure of the linked list. You can define a custom pretty printer to do that.
+
+```python
+TODO
+```
+
+### CTF challenge solving
+
+I have used GDB python scripting to solve a few CTF challenges. It's a quick way to get some information from the binary, if you need to extract some runtime information.
+
+For ex, here I am extracting characters which are generated during runtime, so that I can use them to reverse the encryption algorithm.
+
+```python
+TODO
+```
+
+## GDB Plugins
+
+There are a lot of extensions available for GDB, which can make your life easier. 
+
+### GEF
+
+GEF is a GDB extension which adds a lot of useful features to GDB. It's a must have for CTFs. I will try to do another blog post on features specific to GEF that can be really helpful for CTFs.
+
+### Decomp2dbg
+
+This is a plugin which allows you to connect GDB to a decompiler. It's shows you the decompiled code in GDB, and allows you to set breakpoints in the decompiled code. It's extremely useful when you are debugging a binary without source code, and allows you to keep in sync with the decompiled code for faster debugging or reverse engineering.
