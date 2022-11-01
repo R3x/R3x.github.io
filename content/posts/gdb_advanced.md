@@ -109,7 +109,7 @@ For ex, if I want to break when a thread is created, I can use the following com
 
 Some common uses are :
 - `catch syscall` : Break when a syscall is made
-- `catch syscall <number/name>` : Break whe`n a specific syscall is made
+- `catch syscall <number/name>` : Break when a specific syscall is made
 - `catch throw <regex>` : Break when a specific exception is thrown (C++)
 - `catch catch <regex>` : Break when a specific exception is caught (C++)
 - `catch signal <number/name>` : Break when a specific signal is sent
