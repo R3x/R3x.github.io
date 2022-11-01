@@ -26,6 +26,8 @@ Refer to this blog post: [Debugging LLVM (opt) passes with VSCode](/llvm_debug) 
 
 Using IDA Pro for reverse engineering binaries, has made me a huge fan of CFGs, for analyzing control flows for low level applications. Generating CFGs have been pretty helpful for me to analyze control flows especially when I use opt passes to transform the IR.
 
+![CFG-Sample (Rendered in VSCode)](/llvm_tips/cfg.png)
+
 `opt` itself provides a way to generate CFGs for a given llvm-ir file. You can use the following command to generate the CFG for a function:
 
 ```bash
