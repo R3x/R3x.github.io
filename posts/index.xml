@@ -10,7 +10,19 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Oct 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Oct 2022 23:43:10 +0000</lastBuildDate><atom:link href="https://R3x.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLVM Tips/Tricks</title>
+      <link>https://R3x.github.io/posts/llvm_ir_tips/</link>
+      <pubDate>Mon, 31 Oct 2022 23:43:10 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/posts/llvm_ir_tips/</guid>
+      <description>LLVM Tips/Tricks This is a collection of tips/tricks that I have learned while working with LLVM. I will keep updating this page as I learn more.
+(Last updated: 31st October 2022)
+Debugging LLVM (opt) passes with VSCode Refer to this blog post: Debugging LLVM (opt) passes with VSCode to ease the process of debugging LLVM passes using VSCode&amp;rsquo;s amazing debugging capabilities.
+Generating the CFG for a function Using IDA Pro for reverse engineering binaries, has made me a huge fan of CFGs, for analyzing control flows for low level applications.</description>
+    </item>
+    
     <item>
       <title>Advanced GDB Debugging</title>
       <link>https://R3x.github.io/posts/gdb_advanced/</link>
