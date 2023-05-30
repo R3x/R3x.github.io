@@ -50,3 +50,21 @@ You need to press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> to open the 
 > Note: The `joaompinto.vscode-graphviz` extension works much better than converting the dot file into a png and then viewing it. This is because the function is too large and the png file is too large to be rendered properly. The extension renders the graph in real time, so you can zoom in/out and pan around the graph.
 > It also some nice features like exporting the graph as a png, svg, etc. If you prefer to do that - without going through the hassle of using the `dot` command
 
+
+## LLVM How-Tos
+
+### Creating and Inserting call to a variable argument function in LLVM IR (using a opt pass)
+
+
+
+
+## Troubleshooting LLVM issues
+
+### Instructions get mis-recognized
+
+This is an issue you might face if you are working with multiple versions of LLVM. You might compiling your code with one version of LLVM, but the LLVM libraries you are linking against are from a different version. This can cause the instructions to be mis-recognized. This is because the LLVM libraries are compiled with a different version of LLVM, and the instructions are not recognized properly.
+
+This is because the LLVM instructions have an ID, and the ID is used to determine the instruction type. The IDs sometimes vary between LLVM versions which cause the instructions to be mis-recognized.
+
+The best solution is to not do system-wide installation of LLVM, instead build LLVM from source and use the source directory as the `LLVM_DIR` when building your project. This will ensure that the LLVM libraries are built with the same version of LLVM that you are using to compile your code. 
+Then use the binaries from the `build` directory to run your code.
