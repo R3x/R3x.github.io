@@ -83,5 +83,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Linux</title>
+      <link>https://R3x.github.io/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Systemcalls</title>
+      <link>https://R3x.github.io/tags/systemcalls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://R3x.github.io/tags/systemcalls/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
