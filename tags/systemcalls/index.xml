@@ -12,10 +12,10 @@
     <language>en-us</language><atom:link href="https://R3x.github.io/tags/systemcalls/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exec System Call</title>
-      <link>https://R3x.github.io/posts/linux_system_calls/exec/</link>
+      <link>https://R3x.github.io/posts/linux_system_calls-exec/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://R3x.github.io/posts/linux_system_calls/exec/</guid>
+      <guid>https://R3x.github.io/posts/linux_system_calls-exec/</guid>
       <description>Exec System Call Welcome to the first installment in a blog series that will takes a deep dive into the mechanics of system calls. Today, we&amp;rsquo;re kicking things off with the exec system calls, a fundamental feature in Unix and Linux operating systems.
 Glibc version used : 2.37 Bootlin
 Introduction to the exec library calls Note: Please skip this section if you are already familiar with exec library calls.
